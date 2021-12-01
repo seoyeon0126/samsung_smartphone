@@ -1,0 +1,386 @@
+@charset "utf-8";
+
+/* ★기본사항★ */
+
+* {
+	margin : 0 auto;	
+	/* 가운데로 맞춰주기위해서 0 auto 를 사용 */
+	color : #333;
+	font-family : "나눔 고딕",sanserif;
+	
+}
+
+body { 
+	background-color : #fff;
+}
+
+ul {
+	padding : 0;	/* padding 을 꼭 빼줄것! */
+}
+
+ul>li {
+	list-style : none;
+}
+
+a {
+	color : inherit;
+	text-decoration : none;
+}
+
+.hidden { 
+	position : absolute;
+	left : -9999px; 
+	font-size : 0;
+}
+
+/* ★header 시작★ */
+
+header { 
+	width : 1400px;
+	height : 100px;
+	/* border : 1px solid red; */
+}
+
+header:after {
+	content : "";
+	display : block;
+	clear : both;	
+	/* display 요소가 blcok일 경우에 
+	clear : both 적용 */
+}
+
+header>h1 {
+	width : 152px;
+	float : left;
+	padding-top : 32px;
+	/* 100-36=64/2=32 */
+}
+
+header>ul {
+	width : 500px;
+	float : left;
+	padding-top : 40px;
+}
+
+header>ul>li {
+	float : left;
+	margin-right : 20px;
+}
+
+header>ul>li>a:hover {
+	color : #45bab2; /* #ec545d */
+}
+
+header>ul>li:last-child:after {
+	content : "";
+	display : inline-block;
+	width : 20px;
+	height : 22px;
+	/* border : 1px solid red; */
+	position : absolute;
+	background : url(../images/location.png)
+	no-repeat 0 0;
+	background-size : 90%;
+	/* 만약 size가 크다면 
+	%(퍼센트)단위로 줄여준다 */
+}
+
+header>section {
+	width : 140px;
+	float : right;
+	/* border : 1px solid red; */
+	padding-top : 26px;
+}
+
+header>section>ul>li {
+	float : left;
+}
+
+header>section>ul>li>a {
+	display : inline-block;
+	width : 34px;
+	height : 36px;
+}
+
+header>section>ul>li:nth-child(1)>a {
+	background :
+	url(../images/icon1.png)
+	no-repeat center center;
+	background-size : 70%;
+}
+
+header>section>ul>li:nth-child(2)>a {
+	background :
+	url(../images/icon2.png)
+	no-repeat center center;
+	margin : 0 10px;
+	/* 상하는 0, 좌우는 10 */
+	background-size : 70%;
+}
+
+header>section>ul>li:nth-child(3)>a {
+	background :
+	url(../images/icon3.png)
+	no-repeat center center;
+	background-size : 70%;
+}
+
+header>section>ul>li:nth-child(1)>a:hover {
+	background :
+	url(../images/icon1_1.png)
+	no-repeat center center;
+	background-size : 70%;
+}
+
+header>section>ul>li:nth-child(2)>a:hover {
+	background :
+	url(../images/icon2_1.png)
+	no-repeat center center;
+	margin : 0 10px;
+	/* 상하는 0, 좌우는 10 */
+	background-size : 70%;
+}
+
+header>section>ul>li:nth-child(3)>a:hover {
+	background :
+	url(../images/icon3_1.png)
+	no-repeat center center;
+	background-size : 70%;
+}
+
+/* ★slide 시작★ */
+
+.slide_cover {
+	width : 100%;
+	height : 500px;
+	background-color : #000;
+}
+
+.slide {
+	width : 1400px;
+	height : 500px;
+	background : #000
+	url(../images/slide.png) 
+	no-repeat center center;
+	padding : 130px;
+	box-sizing : border-box;
+	color : #fff;
+}
+
+.slide>h2 {
+	color : #fff;
+	font-size : 1.8em;
+	margin-bottom : 20px;
+}
+
+.slide>p:nth-child(2) {
+	color : #fff;
+	font-size : 0.6em;
+	margin-bottom : 30px;
+}
+
+.slide>p:nth-child(3)>a {
+	/* css 부분에서 span → a */
+	display : inline-block;
+	padding : 8px 15px;
+	background-color : #fff;
+	margin-right : 20px;
+	border-radius : 18px;
+	font-size : 0.8em;
+	margin-bottom : 30px;
+}
+
+.slide>p:nth-child(3)>a:hover {
+	background-color : #45bab2;
+	color : #fff;
+}
+
+.slide>p:nth-child(4) {
+	color : #fff;
+	font-size : 0.5em;
+	letter-spacing : -1px;
+}
+
+/* ★banner 시작★ */
+
+.banner_cover {
+	width : 100%;
+	height : 800px;
+	background-color : #000;
+}
+
+.banner {
+	width : 1400px;
+	height : 800px;
+	/* background-color : #000; */
+}
+
+.banner>h2 {
+	height : 100px;
+	text-align : center;
+	line-height : 100px;
+	color : #fff;
+}
+
+.banner>ul:after {
+		content : "";
+		display : block;
+		clear : both;
+}
+
+.banner>ul>li {
+	width : 335px;
+	/* 335*4=1340+60=1400 
+	margin 20+20+20=60 (20*3)
+	마진을 20씩 3번을 줌 */
+	height : 650px;
+	margin-right : 20px;
+	float : left;
+	border : 1px solid #fff;
+	box-sizing : border-box;
+	/* 사이즈가 초과되서 내려간부분을 다시 
+	센터로 잡아줄 수 있도록
+	잡아주는 역할이 box-sizing 이다 */
+	padding-top : 40px;
+}
+
+.banner>ul>li:last-child {
+	margin-right : 0px;
+}
+
+.banner>ul>li>p:nth-child(1) {
+	width : 234px;
+	height : 303px;
+	/* border : 1px solid red; */
+	cursor : pointer;
+}
+
+.banner>ul>li:nth-child(1)>p:nth-child(1) {
+	background : 
+	url(../images/banner1.png)
+	no-repeat center center;
+}
+
+.banner>ul>li:nth-child(2)>p:nth-child(1) {
+	background : 
+	url(../images/banner2.png)
+	no-repeat center center;
+}
+
+.banner>ul>li:nth-child(3)>p:nth-child(1) {
+	background : 
+	url(../images/banner3.png)
+	no-repeat center center;
+}
+
+.banner>ul>li:nth-child(4)>p:nth-child(1) {
+	background : 
+	url(../images/banner4.png)
+	no-repeat center center;
+}
+
+/* p:nth-child(1)은 고정으로 그냥 두고 나머지
+nth-child 숫자만 수정해주면 된다. */
+
+.banner>ul>li:nth-child(1)>p:nth-child(1):hover {
+	background : 
+	url(../images/banner1_1.png)
+	no-repeat center center;
+}
+
+.banner>ul>li:nth-child(2)>p:nth-child(1):hover {
+	background : 
+	url(../images/banner2_1.png)
+	no-repeat center center;
+}
+
+.banner>ul>li:nth-child(3)>p:nth-child(1):hover {
+	background : 
+	url(../images/banner3_1.png)
+	no-repeat center center;
+}
+
+.banner>ul>li:nth-child(4)>p:nth-child(1):hover {
+	background : 
+	url(../images/banner4_1.png)
+	no-repeat center center;
+}
+
+.banner>ul>li>h3 {
+	color : #fff;
+	text-align : center;
+	margin-bottom : 40px;
+	font-size : 1.3em;
+}
+
+.banner>ul>li>p:nth-child(3) {
+	color : #fff;
+	text-align : center;
+	margin-bottom : 80px;
+}
+
+.banner>ul>li>p:nth-child(4)>a {
+	display : block;
+	color : #fff;
+	text-align : center;
+	width : 200px;
+	/* 블록요소이면 padding이 안됨 */
+	height : 30px;
+	line-height : 30px;
+	border : 1px solid #fff;
+	border-radius : 15px;
+}
+
+.banner>ul>li>p:nth-child(4)>a:hover {
+	background-color : #45bab2;
+}
+
+/* ★footer 시작★ */
+
+footer {
+	width : 1400px;
+	padding : 20px 0px;
+}
+
+footer:after { 
+	content : "";
+	display : block;
+	clear : both;
+}
+
+footer>section {
+	float : left;
+	width : 1020px;
+}
+
+footer>section>p {
+	line-height : 1.6em;
+}
+
+footer>ul {
+	float : right;
+	/* width : 380px; */
+}
+
+footer>ul>li {
+	float : left;
+	padding-right : 6px;
+}
+
+footer>ul>li:nth-child(2) {
+	padding-left : 50px;
+	font-size : 0.6em;
+	line-height : 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

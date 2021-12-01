@@ -1,0 +1,46 @@
+<-- 시안제작 24p -->
+
+// header
+
+로고 123*36
+
+위치_icon 20*19	<!-- header 부분에 디지털프라자 옆 위치_아이콘 -->
+
+user_icon 34*36	icon1	//  hover 했을때 , hover 하지 않았을때
+장바구니_icon 34*36	icon2
+돋보기_icon 34*36	icon3
+
+// slide
+
+배너 1352*501
+
+// banner
+
+S21_234*303	// 휴대폰 , hover 했을때 , hover 하지 않았을 때
+
+// footer
+
+페이스북_및_기타_icon 317*49
+
+320*53
+
+
+41*38
+
+355에 마진 20	355*650	// +50
+
+355
+
+스마트폰을 선택하세요 <!-- 48px -->
+header 부분에 있는 글자 // 16px
+
+포토부분 height 175 , 
+padding 40 ,
+
+banner 부분에있는 폰트 30px
+// 모두보기 사각형 부분, 226 * 44	// 패딩 20
+
+
+float : left;
+float : left;
+float : right;
